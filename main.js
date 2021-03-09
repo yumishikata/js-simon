@@ -32,7 +32,7 @@ $(function(){
 setTimeout(function() {
     $('h3').hide();
 
-}, (5000+1000));
+}, (30000+1000));
 var numeriUtente = [];
 var uguali = [];
 setTimeout(function() {
@@ -56,7 +56,7 @@ if (uguali.length != 0){
 else {
     $('body').append('<h1> MI DISPIACE NON NE HAI INDOVINATO NEMMENO UNO</h1>');
 }
-}, (5000+2000));
+}, (30000+2000));
 
 
 
