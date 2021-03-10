@@ -20,15 +20,14 @@ $(function(){
         var numeriSimon = [];
         var tempo = secondi * 1000;
         //GENERAZIONE E INSERIMENTO ARRAY DI NUMERI RANDOM
-        for (i=0; i<lunghezza ; i++ ){
+        var i=0;
+        while (i<lunghezza){
             var numero = numRandom(1,50);
             if(!inArray(numero,numeriSimon)){
                 numeriSimon.push(numero);
                 $('h3').append(numeriSimon[i] + ' ');
+                i++;
             }
-            else {
-                i--;
-            }  
         }
         console.log(numeriSimon);
         //PARTENZA TIMER
@@ -43,7 +42,6 @@ $(function(){
         }, 1000);
         //DOPO ALLA FINE DEL TIMER SCOMPARE L'ARRAY DI NUMERI
         setTimeout(function() {
-        
             $('h3').hide();
         
         }, tempo +1000); //HO AGGIUNTO SECONDI PERCHE' IL TIMER PARTE UN PO' DOPO
@@ -71,11 +69,7 @@ $(function(){
         var k = (coloraUguali(numeriSimon,uguali)).length;
 
         if (k != 0){
-
             document.getElementById('indovinato').innerHTML = 'I numeri che hai indovinato sono: ' + k + '</h1>';
-
-            
-            
         }
         else {
             $('body').append('<h1> MI DISPIACE NON NE HAI INDOVINATO NEMMENO UNO</h1>');
@@ -135,8 +129,6 @@ function coloraUguali (arrayBase , arrayUguali) {
         i++;
         }
     }
-
-    
     return k;
 };
 
