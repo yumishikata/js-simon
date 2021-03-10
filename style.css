@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+ul li {
+    display: inline-block;
+    padding-right: 20px;
+}

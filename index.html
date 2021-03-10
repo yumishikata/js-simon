@@ -6,12 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <h1>SIMON SAYS</h1>
-    <h2>Hai 30 secondi per ricordarti questi numeri:</h2>
-    <h3></h3>
+    <label for="difficolta">Scegli la difficoltà: </label>
+    <select name="difficolta" id="difficolta">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <input type="submit" id="invia">
+    <input type="submit" id="annulla" value=Annulla>
+    <h2 id="regole"></h2>
+    <h3 id="array-num"></h3>
     <h1 id="timer"></h1>
+    <h1 id="indovinato"></h1>
+    <ul id="lista">
+
+    </ul>
 </body>
 </html>
